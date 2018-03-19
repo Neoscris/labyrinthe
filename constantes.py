@@ -2,7 +2,7 @@
 
 #Paramètres de la fenêtre
 nombre_sprite_cote = 15
-taille_sprite = 30
+taille_sprite = 60
 cote_fenetre = nombre_sprite_cote * taille_sprite
 
 #Personnalisation de la fenêtre
@@ -13,8 +13,8 @@ image_icone = "images/mg_droite.png"
 image_accueil = "images/accueil.png"
 image_fond = "images/fond.jpg"
 image_mur1 = "images/mur1.png"
-image_aiguille = "images/aiguille.jpg"
-image_ether = "images/ether.jpeg"
+image_aiguille = "images/aiguille.png"
+image_ether = "images/ether.png"
 image_gardien = "images/gardien.png"
-image_tube = "images/tube.jpg"
-image_seringue = "images/seringue.jpg"
+image_tube = "images/tube.png"
+image_seringue = "images/seringue.png"

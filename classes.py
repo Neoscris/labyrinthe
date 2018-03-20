@@ -3,6 +3,7 @@
 import pygame
 from pygame.locals import * 
 from constantes import *
+from random.randrange import *
 
 class Niveau:
 	"""Classe permettant de créer un niveau"""
@@ -37,8 +38,8 @@ class Niveau:
 		de la liste de structure renvoyée par generer()"""
 		#Chargement des images 
 		mur = pygame.image.load(image_mur).convert()
-		
-		
+		arrivee = pygame.image.load(image_arrivee).convert_alpha()
+
 		#On parcourt la liste du niveau
 		num_ligne = 0
 		for ligne in self.structure:
@@ -68,11 +69,13 @@ class MacGyver:
 		self.gauche = pygame.image.load(mg_gauche).convert_alpha()
 		#Position du personnage en cases et en pixels
 		self.case_x = 0
-		self.case_y = 0
+		self.case_y = 5
 		self.x = 0
 		self.y = 0
 		#Direction par défaut
 		self.direction = self.droite
+		#Niveau dans lequel le personnage se trouve 
+		self.niveau = niveau
 		
 	
 	
@@ -113,3 +116,103 @@ class MacGyver:
 				if self.niveau.structure[self.case_y+1][self.case_x] != 'm':
 					self.case_y += 1
 					self.y = self.case_y * taille_sprite
+
+
+
+
+class Gardien:
+	"""Classe permettant de créer le personnage Gardien"""
+	def __init__(self, fixe):
+		#Image fixe du gardien
+		self.fixe = pygame.image.load(image_gardien).convert_alpha()
+		#Position du personnage en cases et en pixels
+		self.case_x = 13
+		self.case_y = 5
+		self.x = 0
+		self.y = 0
+		#Niveau dans lequel le personnage se trouve 
+		self.niveau = niveau
+
+
+
+
+class Aiguille:
+	"""Classe permettant de créer l'objet Aiguille"""
+	def __init__(self, fixe )
+		#Image fixe de l'objet
+		self.fixe = pygame.image.load(image_aiguille).convert_alpha()
+		#calcul de la position de l'objet
+		self.x_aleatoire = random.randint(1, 12)
+			#On vérifie que la case de destination n'est pas un mur ou autres
+			if self.niveau.structure[self.case_y][self.case_x] != 'm, d, g, a':
+				#Affichage sur la case
+				self.case_x = 1
+				#Calcul de la position en pixel
+				self.x = 0
+				self.y = 0
+		self.y_aleatoire = random.randint(0, 10)
+			#On vérifie que la case de destination n'est pas un mur ou autres
+			if self.niveau.structure[self.case_y][self.case_x] != 'm, d, g, a':
+				#Affichage sur la case
+				self.case_x = 1
+				#Calcul de la position en pixel
+				self.x = 0
+				self.y = 0
+				#Niveau dans lequel l'objet se trouve 
+				self.niveau = niveau
+
+
+
+
+class Tube:
+	"""Classe permettant de créer l'objet Tube"""
+	def __init__(self, fixe)
+		#Image fixe de l'objet
+		self.fixe = pygame.image.load(image_tube).convert_alpha()
+		#calcul de la position de l'objet
+		self.x_aleatoire = random.randint(1, 12)
+			#On vérifie que la case de destination n'est pas un mur ou autres
+			if self.niveau.structure[self.case_y][self.case_x] != 'm, d, g, a':
+				#Affichage sur la case
+				self.case_x = 1
+				#Calcul de la position en pixel
+				self.x = 0
+				self.y = 0
+		self.y_aleatoire = random.randint(0, 10)
+			#On vérifie que la case de destination n'est pas un mur ou autres
+			if self.niveau.structure[self.case_y][self.case_x] != 'm, d, g, a':
+				#Affichage sur la case
+				self.case_x = 1
+				#Calcul de la position en pixel
+				self.x = 0
+				self.y = 0
+				#Niveau dans lequel l'objet se trouve 
+				self.niveau = niveau
+
+
+
+
+class Ether:
+	"""Classe permettant de créer l'objet Ether"""
+	def __init__(self, )
+		#Image fixe de l'objet
+		self.fixe = pygame.image.load(image_ether).convert_alpha()
+		#calcul de la position de l'objet
+		self.x_aleatoire = random.randint(1, 12)
+			#On vérifie que la case de destination n'est pas un mur ou autres
+			if self.niveau.structure[self.case_y][self.case_x] != 'm, d, g, a':
+				#Affichage sur la case
+				self.case_x = 1
+				#Calcul de la position en pixel
+				self.x = 0
+				self.y = 0
+		self.y_aleatoire = random.randint(0, 10)
+			#On vérifie que la case de destination n'est pas un mur ou autres
+			if self.niveau.structure[self.case_y][self.case_x] != 'm, d, g, a':
+				#Affichage sur la case
+				self.case_x = 1
+				#Calcul de la position en pixel
+				self.x = 0
+				self.y = 0
+				#Niveau dans lequel l'objet se trouve 
+				self.niveau = niveau

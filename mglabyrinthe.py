@@ -25,6 +25,8 @@ pygame.display.set_icon(icone)
 pygame.display.set_caption(titre_fenetre)
 
 
+
+
 #BOUCLE PRINCIPALE
 continuer = 1
 while continuer:	
@@ -82,6 +84,7 @@ while continuer:
 		aiguille = Aiguille("images/aiguille.png", niveau)
 		tube = Tube("images/tube.png", niveau)
 		ether = Ether("images/ether.png", niveau)
+		seringue = Seringue("image/seringue.png", niveau)
 				
 	#BOUCLE DE JEU
 	while continuer_jeu:
@@ -121,6 +124,24 @@ while continuer:
 		#Victoire -> Retour à l'accueil
 		if niveau.structure[mg.case_y][mg.case_x] == 'a':
 			continuer_jeu = 0
+
+
+	
+#Intéraction entre les objets et MacGyver
+#Création de l'inventaire qui contiendra les objets
+inventaire = {}
+#Condition pour que les objets se mettent dans l'inventaire
+if niveau.structure[mg.case_y][mg.case_x] == niveau.structure[ether.case_y][ether.case_x]
+	inventaire[] = ether
+
+if niveau.structure[mg.case_y][mg.case_x] == niveau.structure[tube.case_y][tube.case_x]
+	inventaire[] = tube
+
+if niveau.structure[mg.case_y][mg.case_x] == niveau.structure[aiguille.case_y][aiguille.case_x]
+	inventaire[] = aiguille
+
+
+
 
 # On met en pause le système (Windows)
 os.system("pause")

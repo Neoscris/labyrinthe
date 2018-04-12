@@ -116,7 +116,22 @@ while continuer:
 				elif event.key == K_DOWN:
 					mg.deplacer('bas')			
 				
-				
+				#Intéraction entre les objets et MacGyver
+				#Création de l'inventaire qui contiendra les objets
+				inventaire = {}
+				#Condition pour que les objets se mettent dans l'inventaire
+				if niveau.structure[mg.case_y][mg.case_x] == niveau.structure[ether.case_y][ether.case_x]:
+					inventaire[ether] = objet.ether
+					print("Vous avez trouvé de l'éther")
+
+				if niveau.structure[mg.case_y][mg.case_x] == niveau.structure[tube.case_y][tube.case_x]:
+					inventaire[tube] = objet.tube
+					print("Vous avez trouvé un tube")
+
+				if niveau.structure[mg.case_y][mg.case_x] == niveau.structure[aiguille.case_y][aiguille.case_x]:
+					inventaire[aiguille] = objet.aiguille
+					print("Vous avez trouvé une aiguille")
+
 		#Affichages aux nouvelles positions
 		fenetre.blit(fond, (0,0))
 		niveau.afficher(fenetre)

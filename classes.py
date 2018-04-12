@@ -126,6 +126,7 @@ class Gardien:
 	def __init__(self, fixe):
 		#Image fixe du gardien
 		self.fixe = pygame.image.load(image_gardien).convert_alpha()
+
 		#Position du personnage en cases et en pixels
 		self.case_x = 13
 		self.case_y = 5
@@ -144,8 +145,8 @@ class Aiguille:
 		self.fixe = pygame.image.load(image_aiguille).convert_alpha()
 
 		#calcul de la position de l'objet
-		i = self.x_aleatoire in random.randint(1, 12)
-			
+		self.x_aleatoire = random.randint(1, 12)
+		i = 0
 		#On vérifie que la case de destination n'est pas un mur ou autres
 		while self.niveau.structure[self.case_y][self.case_x] = 'm, d, g, a, tube.case_x, ether.case_x':
 			i += 1 #On incrémente i de 1 à chaque tour de boucle
@@ -157,8 +158,8 @@ class Aiguille:
 		self.x = 0
 		self.y = 0
 
-		i = self.y_aleatoire in random.randint(0, 10)
-		
+		self.y_aleatoire = random.randint(0, 10)
+		i = 0
 		#On vérifie que la case de destination n'est pas un mur ou autres
 		while self.niveau.structure[self.case_y][self.case_x] = 'm, d, g, a, tube.case_y, ether.case_y':
 			i += 1 #On incrémente i de 1 à chaque tour de boucle
@@ -182,8 +183,8 @@ class Tube:
 		self.fixe = pygame.image.load(image_tube).convert_alpha()
 
 		#calcul de la position de l'objet
-		i = self.x_aleatoire in random.randint(1, 12)
-
+		self.x_aleatoire = random.randint(1, 12)
+		i = 0
 		#On vérifie que la case de destination n'est pas un mur ou autres
 		while self.niveau.structure[self.case_y][self.case_x] = 'm, d, g, a, aiguille.case_x, ether.case_x':
 			i += 1 #On incrémente i de 1 à chaque tour de boucle
@@ -195,8 +196,8 @@ class Tube:
 		self.x = 0
 		self.y = 0
 
-		i = self.y_aleatoire in random.randint(0, 10)
-			
+		self.y_aleatoire = random.randint(0, 10)
+		i = 0
 		#On vérifie que la case de destination n'est pas un mur ou autres
 		while self.niveau.structure[self.case_y][self.case_x] = 'm, d, g, a, aiguille.case_y, ether.case_y':
 			i += 1 #On incrémente i de 1 à chaque tour de boucle
@@ -220,8 +221,8 @@ class Ether:
 		self.fixe = pygame.image.load(image_ether).convert_alpha()
 
 		#calcul de la position de l'objet
-		i = self.x_aleatoire in random.randint(1, 12):
-
+		self.x_aleatoire = random.randint(1, 12):
+		i = 0
 		#On vérifie que la case de destination n'est pas un mur ou autres
 		while self.niveau.structure[self.case_y][self.case_x] = 'm, d, g, a, aiguille.case_x, tube.case_x':
 			i += 1 #On incrémente i de 1 à chaque tour de boucle
@@ -233,8 +234,8 @@ class Ether:
 		self.x = 0
 		self.y = 0
 
-		i = self.y_aleatoire in random.randint(0, 10)
-
+		self.y_aleatoire = random.randint(0, 10)
+		i = 0
 		#On vérifie que la case de destination n'est pas un mur ou autres
 		while self.niveau.structure[self.case_y][self.case_x] = 'm, d, g, a, aiguille.case_y, tube.case_y':
 			i += 1 #On incrémente i de 1 à chaque tour de boucle

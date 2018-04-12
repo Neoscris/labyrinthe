@@ -142,22 +142,30 @@ class Aiguille:
 	def __init__(self, fixe ):
 		#Image fixe de l'objet
 		self.fixe = pygame.image.load(image_aiguille).convert_alpha()
+
 		#calcul de la position de l'objet
-		for self.x_aleatoire in random.randint(1, 12)
-			#On vérifie que la case de destination n'est pas un mur ou autres
-			if self.niveau.structure[self.case_y][self.case_x] != 'm, d, g, a, tube.case_x, ether.case_x':
-			#Affichage sur la case
-			elif self.case_x = 0
-				 self.case_y = 0
+		i = self.x_aleatoire in random.randint(1, 12)
+			
+		#On vérifie que la case de destination n'est pas un mur ou autres
+		while self.niveau.structure[self.case_y][self.case_x] = 'm, d, g, a, tube.case_x, ether.case_x':
+			i += 1 #On incrémente i de 1 à chaque tour de boucle
+		
+		#Affichage sur la case
+		self.case_x = 0
+		self.case_y = 0
 		#Calcul de la position en pixel
 		self.x = 0
 		self.y = 0
-		for self.y_aleatoire in random.randint(0, 10)
-			#On vérifie que la case de destination n'est pas un mur ou autres
-			if self.niveau.structure[self.case_y][self.case_x] != 'm, d, g, a, tube.case_y, ether.case_y':
-			#Affichage sur la case
-			elif self.case_x = 0
-				 self.case_y = 0
+
+		i = self.y_aleatoire in random.randint(0, 10)
+		
+		#On vérifie que la case de destination n'est pas un mur ou autres
+		while self.niveau.structure[self.case_y][self.case_x] = 'm, d, g, a, tube.case_y, ether.case_y':
+			i += 1 #On incrémente i de 1 à chaque tour de boucle
+		
+		#Affichage sur la case
+		self.case_x = 0
+		self.case_y = 0
 		#Calcul de la position en pixel
 		self.x = 0
 		self.y = 0
@@ -172,22 +180,30 @@ class Tube:
 	def __init__(self, fixe):
 		#Image fixe de l'objet
 		self.fixe = pygame.image.load(image_tube).convert_alpha()
+
 		#calcul de la position de l'objet
-		for self.x_aleatoire in random.randint(1, 12)
-			#On vérifie que la case de destination n'est pas un mur ou autres
-			if self.niveau.structure[self.case_y][self.case_x] != 'm, d, g, a, aiguille.case_x, ether.case_x':
-			#Affichage sur la case
-			elif self.case_x = 0
-				 self.case_y = 0
+		i = self.x_aleatoire in random.randint(1, 12)
+
+		#On vérifie que la case de destination n'est pas un mur ou autres
+		while self.niveau.structure[self.case_y][self.case_x] = 'm, d, g, a, aiguille.case_x, ether.case_x':
+			i += 1 #On incrémente i de 1 à chaque tour de boucle
+		
+		#Affichage sur la case
+		self.case_x = 0
+		self.case_y = 0
 		#Calcul de la position en pixel
 		self.x = 0
 		self.y = 0
-		for self.y_aleatoire in random.randint(0, 10)
-			#On vérifie que la case de destination n'est pas un mur ou autres
-			if self.niveau.structure[self.case_y][self.case_x] != 'm, d, g, a, aiguille.case_y, ether.case_y':
-			#Affichage sur la case
-			elif self.case_x = 0
-				 self.case_y = 0
+
+		i = self.y_aleatoire in random.randint(0, 10)
+			
+		#On vérifie que la case de destination n'est pas un mur ou autres
+		while self.niveau.structure[self.case_y][self.case_x] = 'm, d, g, a, aiguille.case_y, ether.case_y':
+			i += 1 #On incrémente i de 1 à chaque tour de boucle
+		
+		#Affichage sur la case
+		self.case_x = 0
+		self.case_y = 0
 		#Calcul de la position en pixel
 		self.x = 0
 		self.y = 0
@@ -202,22 +218,30 @@ class Ether:
 	def __init__(self, fixe):
 		#Image fixe de l'objet
 		self.fixe = pygame.image.load(image_ether).convert_alpha()
+
 		#calcul de la position de l'objet
-		for self.x_aleatoire in random.randint(1, 12)
-			#On vérifie que la case de destination n'est pas un mur ou autres
-			if self.niveau.structure[self.case_y][self.case_x] != 'm, d, g, a, aiguille.case_x, tube.case_x':
-			#Affichage sur la case
-			elif self.case_x = 0
-				 self.case_y = 0
+		i = self.x_aleatoire in random.randint(1, 12):
+
+		#On vérifie que la case de destination n'est pas un mur ou autres
+		while self.niveau.structure[self.case_y][self.case_x] = 'm, d, g, a, aiguille.case_x, tube.case_x':
+			i += 1 #On incrémente i de 1 à chaque tour de boucle
+		
+		#Affichage sur la case
+		self.case_x = 0
+		self.case_y = 0
 		#Calcul de la position en pixel
 		self.x = 0
 		self.y = 0
-		for self.y_aleatoire in random.randint(0, 10)
-			#On vérifie que la case de destination n'est pas un mur ou autres
-			if self.niveau.structure[self.case_y][self.case_x] != 'm, d, g, a, aiguille.case_y, tube.case_y':
-			#Affichage sur la case
-			elif self.case_x = 0
-				 self.case_y = 0
+
+		i = self.y_aleatoire in random.randint(0, 10)
+
+		#On vérifie que la case de destination n'est pas un mur ou autres
+		while self.niveau.structure[self.case_y][self.case_x] = 'm, d, g, a, aiguille.case_y, tube.case_y':
+			i += 1 #On incrémente i de 1 à chaque tour de boucle
+		
+		#Affichage sur la case
+		self.case_x = 0
+		self.case_y = 0
 		#Calcul de la position en pixel
 		self.x = 0
 		self.y = 0
@@ -232,13 +256,17 @@ class Seringue:
 	def __init__(self, fixe):
 		#Image fixe de l'objet
 		self.fixe = pygame.image.load(image_seringue).convert_alpha()
-		#Niveau dans lequel l'objet se trouve 
-		self.niveau = niveau
-
+		
 	def generer(self, inventaire):
 		"""Méthode permettant de générer l'objet quand les 3 éléments sont réunis"""
 		
 		if inventaire{} == 'aiguille, tube, ether'
 			print("Vous créez l'objet seringue")
+		#Position de l'ojet sur l'affichage
+		self.x =
+		self.y =
+		#Niveau dans lequel l'objet se trouve 
+		self.niveau = niveau
+
 
 
